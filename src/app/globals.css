@@ -11,6 +11,10 @@
     gap: 5px;
 }
 
+.button-size{
+  min-width: 78px;
+}
+
 .button-spacing{
   margin: 1px;
 }
