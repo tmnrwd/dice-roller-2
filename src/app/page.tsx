@@ -30,7 +30,7 @@ function dieButtonEventHandler( quantity: number, sides: number):any {
 
 function MyButton( key:string , quantity:number, sides:number) {
   return (
-    <Button variant="primary" key={key} onClick={()=>dieButtonEventHandler(quantity, sides)}>{quantity}d{sides}</Button>
+    <Button className="button-spacing" variant="secondary" key={key} onClick={()=>dieButtonEventHandler(quantity, sides)}>{quantity}d{sides}</Button>
   );
 }
 
