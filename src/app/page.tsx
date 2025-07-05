@@ -11,7 +11,7 @@ const defaultDiceValues = [
 
 function defaultDice(){
   return defaultDiceValues.map( die => 
-    MyButton( die.key, die.name, die.modifier, die.quantity, die.size)
+    DiceButton( die.key, die.name, die.modifier, die.quantity, die.size)
   )
 }
 
@@ -19,7 +19,7 @@ function dieButtonEventHandler( quantity: number, sides: number):any {
     rollDice(sides, quantity);
 }
 
-function MyButton( key:number , label:string, modifier: number, quantity:number, sides:number) {
+function DiceButton( key:number , label:string, modifier: number, quantity:number, sides:number) {
   let displayModifier = "";
   if (modifier > 0){
     displayModifier += "+" + modifier;
