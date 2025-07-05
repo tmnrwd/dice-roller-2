@@ -1,6 +1,8 @@
 'use client';
 import {rollDice } from "./js/diceLogic";
+import MySelect from "./components/MySelect";
 import Button from 'react-bootstrap/Button';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const defaultDiceValues = [
@@ -35,12 +37,31 @@ function DiceButton( key:number , label:string, modifier: number, quantity:numbe
   );
 }
 
+
+
+function addDiceWidget(){
+    return (
+      <div>
+        {MySelect()}
+        <Button className="button-size button-spacing" variant="secondary" key={1111} onClick={()=>dieButtonEventHandler(1, 2)}>
+          Add Die
+        </Button>
+      </div>
+    
+  );
+}
+
 export default function Home() {
   return (
+        <div>
           <div className="my-column-container">
             <div className="my-column">
               {defaultDice()}
             </div>
           </div>            
+          <div className="my-column-container">
+              {addDiceWidget()}
+            </div>
+        </div>
   );
 }
