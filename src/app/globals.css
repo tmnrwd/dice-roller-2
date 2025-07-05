@@ -6,7 +6,7 @@
 .my-column-container{
     display: flex;
     flex-direction: row;
-    height: 100dvh;
+    height: 50dvh;
     padding: 15px;
     gap: 5px;
 }
